@@ -30,13 +30,13 @@ DEFAULT_MODEL = "gemini-3.5-flash"
 
 # SCRIPT_DIR = Path(__file__).resolve().parent
 # ARTECULTURE_DIR = SCRIPT_DIR.parents[1]
-# CONCEPT_DIR =  "/home/xiaolin/Model_37_ArtElingo/"
-# LLM_ANALYSIS_DIR = "/home/xiaolin/Model_37_ArtElingo/LLM-analysis/"
+# CONCEPT_DIR =  "/home/xiaolin/Model_37_ArtECulture/"
+# LLM_ANALYSIS_DIR = "/home/xiaolin/Model_37_ArtECulture/LLM-analysis/"
 
 DEFAULT_TEST_CSV = "/home/xiaolin/dataset/ArtECulture/arteculture_6792_downsampled_with_country_nonblank_region_split_v2_test.csv"
-DEFAULT_CONCEPT_JSONL = "/home/xiaolin/Model_37_ArtElingo/LLM-analysis/1-original-image-concept/step3_image_concepts.jsonl"
-DEFAULT_KB_DIR = "/home/xiaolin/Model_37_ArtElingo/LLM-analysis/"
-DEFAULT_OUTPUT_DIR = "/home/xiaolin/Model_37_ArtElingo/RAG-Evaluation/outputs"
+DEFAULT_CONCEPT_JSONL = "/home/xiaolin/Model_37_ArtECulture/LLM-analysis/1-original-image-concept/step3_image_concepts.jsonl"
+DEFAULT_KB_DIR = "/home/xiaolin/Model_37_ArtECulture/LLM-analysis/"
+DEFAULT_OUTPUT_DIR = "/home/xiaolin/Model_37_ArtECulture/RAG-Evaluation/outputs"
 
 OLD_IMAGE_PREFIX = "/home/xiaolin/dataset/ArtECulture/Image/"
 DEFAULT_IMAGE_BASE = "/home/xiaolin/dataset/ArtECulture/Image/"
