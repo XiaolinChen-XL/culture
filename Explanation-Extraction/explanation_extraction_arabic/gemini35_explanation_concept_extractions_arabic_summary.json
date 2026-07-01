@@ -1,0 +1,17 @@
+{
+  "culture": "arabic",
+  "model": "gemini-3.5-flash",
+  "source_explanation_file": "/home/xiaolin/Model_36_ArtElingo/arabic_explanations_full.jsonl",
+  "train_csv": "/home/xiaolin/Model_36_ArtElingo/arteculture_6792_downsampled_with_country_nonblank_region_split_v2_train.csv",
+  "batch_output": "explanation_extraction_arabic/gemini35_explanation_concept_extractions_arabic.jsonl",
+  "flat_output": "explanation_extraction_arabic/gemini35_explanation_concept_extractions_arabic_flat.jsonl",
+  "failed_output": "explanation_extraction_arabic/gemini35_explanation_concept_extractions_arabic_failed.jsonl",
+  "records_loaded": 23694,
+  "batches_total": 1185,
+  "batches_processed_this_run": 1183,
+  "batches_failed_this_run": 2,
+  "extractions_written_this_run": 24703,
+  "empty_texts_this_run": 660,
+  "image_rows": 6792,
+  "kept_train_image_rows": 5434
+}

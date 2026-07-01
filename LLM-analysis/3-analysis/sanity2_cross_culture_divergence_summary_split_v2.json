@@ -1,0 +1,112 @@
+{
+  "source": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10.jsonl",
+  "emotion_vocab": [
+    "amusement",
+    "anger",
+    "awe",
+    "contentment",
+    "disgust",
+    "excitement",
+    "fear",
+    "sadness",
+    "something else"
+  ],
+  "high_support_entries": 6710,
+  "sample_seed": 20260629,
+  "sample_n": 30,
+  "complete_three_culture_concept_dimension": 5285,
+  "bins": {
+    "js_zh_en": {
+      "<0.05": {
+        "count": 1186,
+        "percent": 22.440870387890254
+      },
+      "0.05-0.15": {
+        "count": 3199,
+        "percent": 60.52980132450331
+      },
+      "0.15-0.30": {
+        "count": 880,
+        "percent": 16.65089877010407
+      },
+      ">=0.30": {
+        "count": 20,
+        "percent": 0.3784295175023652
+      },
+      "stats": {
+        "mean": 0.09662558987793776,
+        "median": 0.08386222929468434,
+        "max": 0.36420684381069013
+      }
+    },
+    "js_ar_en": {
+      "<0.05": {
+        "count": 1396,
+        "percent": 26.41438032166509
+      },
+      "0.05-0.15": {
+        "count": 3047,
+        "percent": 57.65373699148534
+      },
+      "0.15-0.30": {
+        "count": 825,
+        "percent": 15.610217596972564
+      },
+      ">=0.30": {
+        "count": 17,
+        "percent": 0.3216650898770104
+      },
+      "stats": {
+        "mean": 0.09266874628021483,
+        "median": 0.08176960977527394,
+        "max": 0.3765862714610023
+      }
+    },
+    "js_zh_ar": {
+      "<0.05": {
+        "count": 360,
+        "percent": 6.811731315042574
+      },
+      "0.05-0.15": {
+        "count": 2777,
+        "percent": 52.54493850520341
+      },
+      "0.15-0.30": {
+        "count": 2050,
+        "percent": 38.78902554399243
+      },
+      ">=0.30": {
+        "count": 98,
+        "percent": 1.8543046357615895
+      },
+      "stats": {
+        "mean": 0.14149174404716022,
+        "median": 0.13288407531990187,
+        "max": 0.4100432207459659
+      }
+    },
+    "mean_js": {
+      "<0.05": {
+        "count": 205,
+        "percent": 3.878902554399243
+      },
+      "0.05-0.15": {
+        "count": 4236,
+        "percent": 80.15137180700094
+      },
+      "0.15-0.30": {
+        "count": 844,
+        "percent": 15.96972563859981
+      },
+      ">=0.30": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "stats": {
+        "mean": 0.11026202673510428,
+        "median": 0.10590627338055474,
+        "max": 0.2599823194889566
+      }
+    }
+  }
+}

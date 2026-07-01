@@ -1,0 +1,23 @@
+Culture: zh
+  Concepts with N >= 30: 582 entries  (核心 KB)
+  Concepts with 10-29:   1239 entries  (常规 KB)
+  Concepts with 5-9:     1691 entries  (低置信 KB, 可选)
+  Concepts with 1-4:     22481 entries  (丢弃)
+
+Culture: en
+  Concepts with N >= 30: 580 entries  (核心 KB)
+  Concepts with 10-29:   1323 entries  (常规 KB)
+  Concepts with 5-9:     1943 entries  (低置信 KB, 可选)
+  Concepts with 1-4:     26218 entries  (丢弃)
+
+Culture: ar
+  Concepts with N >= 30: 586 entries  (核心 KB)
+  Concepts with 10-29:   1350 entries  (常规 KB)
+  Concepts with 5-9:     2011 entries  (低置信 KB, 可选)
+  Concepts with 1-4:     26401 entries  (丢弃)
+
+Concept-only reference across train images:
+  Concepts with N >= 30: 603 entries
+  Concepts with 10-29:   1005 entries
+  Concepts with 5-9:     1306 entries
+  Concepts with 1-4:     13385 entries

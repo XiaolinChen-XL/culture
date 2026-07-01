@@ -1,0 +1,25 @@
+{
+  "source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_cultural_meanings_gemini35_english.json",
+  "output_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_dominant_emotion_tuples_gemini35_english.json",
+  "source_records": 9353,
+  "tuple_count": 9353,
+  "skipped_count": 0,
+  "skipped_sample": [],
+  "culture_counts": {
+    "ar": 3091,
+    "en": 3057,
+    "zh": 3205
+  },
+  "dominant_emotion_counts": {
+    "amusement": 1588,
+    "anger": 17,
+    "awe": 1402,
+    "contentment": 5214,
+    "disgust": 197,
+    "excitement": 202,
+    "fear": 357,
+    "sadness": 234,
+    "something else": 142
+  },
+  "empty_key_associations_count": 0
+}

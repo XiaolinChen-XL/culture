@@ -1,0 +1,89 @@
+{
+  "source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_dominant_emotion_tuples_gemini35_english.json",
+  "totals": {
+    "ar": 3091,
+    "en": 3057,
+    "zh": 3205
+  },
+  "emotions": [
+    "amusement",
+    "awe",
+    "contentment",
+    "excitement",
+    "anger",
+    "disgust",
+    "fear",
+    "sadness",
+    "something else"
+  ],
+  "counts": {
+    "ar": {
+      "amusement": 1282,
+      "awe": 680,
+      "contentment": 860,
+      "excitement": 83,
+      "anger": 12,
+      "disgust": 5,
+      "fear": 27,
+      "sadness": 80,
+      "something else": 62
+    },
+    "en": {
+      "amusement": 267,
+      "awe": 691,
+      "contentment": 1633,
+      "excitement": 117,
+      "anger": 4,
+      "disgust": 15,
+      "fear": 162,
+      "sadness": 90,
+      "something else": 78
+    },
+    "zh": {
+      "amusement": 39,
+      "awe": 31,
+      "contentment": 2721,
+      "excitement": 2,
+      "anger": 1,
+      "disgust": 177,
+      "fear": 168,
+      "sadness": 64,
+      "something else": 2
+    }
+  },
+  "percentages": {
+    "ar": {
+      "amusement": 0.41475250727919766,
+      "awe": 0.21999352960207053,
+      "contentment": 0.2782271109673245,
+      "excitement": 0.02685215140731155,
+      "anger": 0.0038822387576835974,
+      "disgust": 0.0016175994823681655,
+      "fear": 0.008735037204788094,
+      "sadness": 0.02588159171789065,
+      "something else": 0.020058233581365253
+    },
+    "en": {
+      "amusement": 0.0873405299313052,
+      "awe": 0.2260385999345764,
+      "contentment": 0.5341838403663722,
+      "excitement": 0.038272816486751716,
+      "anger": 0.0013084723585214263,
+      "disgust": 0.004906771344455349,
+      "fear": 0.05299313052011776,
+      "sadness": 0.029440628066732092,
+      "something else": 0.02551521099116781
+    },
+    "zh": {
+      "amusement": 0.012168486739469579,
+      "awe": 0.009672386895475818,
+      "contentment": 0.8489859594383775,
+      "excitement": 0.0006240249609984399,
+      "anger": 0.00031201248049921997,
+      "disgust": 0.05522620904836194,
+      "fear": 0.052418096723868955,
+      "sadness": 0.019968798751950078,
+      "something else": 0.0006240249609984399
+    }
+  }
+}

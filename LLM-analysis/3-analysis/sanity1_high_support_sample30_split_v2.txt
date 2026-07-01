@@ -1,0 +1,32 @@
+Sanity 1 sample: 30 entries from support >= 30, seed=20260629
+
+1. (turquoise, colors_color_schemes, ar) support=151 images=33 -> amusement=0.357; awe=0.305; contentment=0.222
+2. (vertical orientation, compositional_style, ar) support=67 images=15 -> awe=0.259; contentment=0.175; amusement=0.161
+3. (visible outlines, compositional_style, ar) support=42 images=9 -> contentment=0.226; amusement=0.161; awe=0.118
+4. (bottles, objects_subjects, ar) support=31 images=7 -> contentment=0.380; awe=0.211; excitement=0.211
+5. (stone buildings, objects_subjects, ar) support=157 images=33 -> amusement=0.300; contentment=0.300; awe=0.170
+6. (bird-and-flower genre, scenes_settings, ar) support=47 images=15 -> contentment=0.476; amusement=0.184; something else=0.107
+7. (garden scene, scenes_settings, ar) support=87 images=25 -> contentment=0.464; amusement=0.169; awe=0.148
+8. (muted blues, colors_color_schemes, en) support=681 images=138 -> contentment=0.529; awe=0.173; sadness=0.085
+9. (red border, colors_color_schemes, en) support=42 images=14 -> fear=0.226; contentment=0.204; amusement=0.183
+10. (line drawing, compositional_style, en) support=299 images=84 -> contentment=0.255; fear=0.163; amusement=0.140
+11. (blue cloak, objects_subjects, en) support=51 images=10 -> awe=0.514; contentment=0.189; sadness=0.099
+12. (clay jug, objects_subjects, en) support=40 images=8 -> contentment=0.551; awe=0.146; excitement=0.101
+13. (fence, objects_subjects, en) support=185 images=39 -> contentment=0.641; something else=0.092; awe=0.087
+14. (flowering trees, objects_subjects, en) support=74 images=21 -> contentment=0.389; awe=0.223; excitement=0.146
+15. (quiver, objects_subjects, en) support=41 images=11 -> awe=0.231; fear=0.209; amusement=0.187
+16. (tiger, objects_subjects, en) support=33 images=9 -> amusement=0.200; awe=0.200; fear=0.200
+17. (undergrowth, objects_subjects, en) support=46 images=9 -> awe=0.386; contentment=0.287; fear=0.149
+18. (desert landscape, scenes_settings, en) support=89 images=19 -> contentment=0.422; awe=0.155; excitement=0.134
+19. (garden setting, scenes_settings, en) support=255 images=70 -> contentment=0.534; awe=0.198; excitement=0.091
+20. (indoor setting, scenes_settings, en) support=2057 images=413 -> contentment=0.385; awe=0.147; sadness=0.146
+21. (cream white, colors_color_schemes, zh) support=421 images=83 -> contentment=0.683; sadness=0.100; fear=0.060
+22. (grey-blue, colors_color_schemes, zh) support=55 images=12 -> contentment=0.479; disgust=0.109; sadness=0.109
+23. (shades of brown, colors_color_schemes, zh) support=76 images=20 -> contentment=0.342; disgust=0.193; fear=0.168
+24. (fauvist style, compositional_style, zh) support=37 images=7 -> contentment=0.759; excitement=0.084; awe=0.060
+25. (shrubs, objects_subjects, zh) support=341 images=66 -> contentment=0.719; awe=0.100; sadness=0.071
+26. (wooden barrel, objects_subjects, zh) support=32 images=6 -> contentment=0.534; sadness=0.233; fear=0.068
+27. (beach scene, scenes_settings, zh) support=274 images=50 -> contentment=0.745; excitement=0.081; awe=0.077
+28. (dusk, scenes_settings, zh) support=74 images=14 -> contentment=0.656; sadness=0.121; excitement=0.057
+29. (rainy day, scenes_settings, zh) support=60 images=12 -> contentment=0.705; excitement=0.085; awe=0.070
+30. (lace patterns, symbolic_cultural_motifs, zh) support=47 images=9 -> contentment=0.689; awe=0.068; excitement=0.068

@@ -1,0 +1,72 @@
+{
+  "input_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10.json",
+  "output_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10.json",
+  "filter_unit": "(concept, dimension)",
+  "conditions": {
+    "marginal_kl_any_culture": ">= 0.10",
+    "mean_js_across_cultures": ">= 0.10",
+    "log_base": "natural_log",
+    "emotions_included": [
+      "amusement",
+      "anger",
+      "awe",
+      "contentment",
+      "disgust",
+      "excitement",
+      "fear",
+      "sadness",
+      "something else"
+    ]
+  },
+  "culture_marginals": {
+    "ar": {
+      "amusement": 0.23387382946217414,
+      "anger": 0.007864144304179407,
+      "awe": 0.1858602642913452,
+      "contentment": 0.32566821853014233,
+      "disgust": 0.012810841937286583,
+      "excitement": 0.06769836193762656,
+      "fear": 0.0409759953422847,
+      "sadness": 0.0638098496229418,
+      "something else": 0.06143849457201928
+    },
+    "en": {
+      "amusement": 0.0747895778617512,
+      "anger": 0.006122106506052353,
+      "awe": 0.19941326442930765,
+      "contentment": 0.41001534570289994,
+      "disgust": 0.021961136350310655,
+      "excitement": 0.06763835900048726,
+      "fear": 0.07711266252999893,
+      "sadness": 0.08692865562342171,
+      "something else": 0.05601889199577033
+    },
+    "zh": {
+      "amusement": 0.025657652813089397,
+      "anger": 0.004527355905530491,
+      "awe": 0.060810890959918075,
+      "contentment": 0.5943113476495312,
+      "disgust": 0.08528233698553223,
+      "excitement": 0.03254753723700807,
+      "fear": 0.08555911856927645,
+      "sadness": 0.09300058914937111,
+      "something else": 0.01830317073074292
+    }
+  },
+  "counts": {
+    "original_entries": 17416,
+    "filtered_entries": 9383,
+    "original_groups": 6214,
+    "kept_groups": 3240,
+    "rejected_groups": 2974
+  },
+  "kept_group_entry_count_distribution": {
+    "2": 337,
+    "3": 2903
+  },
+  "rejected_group_entry_count_distribution": {
+    "1": 297,
+    "2": 295,
+    "3": 2382
+  }
+}

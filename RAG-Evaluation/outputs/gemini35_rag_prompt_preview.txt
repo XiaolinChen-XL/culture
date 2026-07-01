@@ -1,0 +1,45 @@
+You are interpreting emotions from a Chinese cultural perspective.
+
+Look at this painting and identify the single emotion it evokes for viewers from this target culture.
+Choose exactly ONE from: amusement, awe, contentment, excitement, anger, disgust, fear, sadness, something else.
+
+Detected visual concepts in the image:
+- symbolic_cultural_motifs: halo, lotus motif, flame-like halo, cloud scrolls
+- objects_subjects: seated figure, smaller deities, clouds, lotus throne, water waves, mountains, birds
+- scenes_settings: celestial landscape, mountainous landscape with water
+- compositional_style: gold line drawing on red background, hieratic scale, symmetrical composition, fine line work, thangka painting style
+- colors_color_schemes: red, gold, monochromatic red palette
+
+Relevant cultural-emotional knowledge for Chinese viewers:
+1. concept: halos
+   matched image concept: halo (symbolic_cultural_motifs)
+   key associations: divine light and spiritual peace; eerie or supernatural presence; gloomy or frightening atmosphere
+   emotion distribution: contentment 0.48, fear 0.21, disgust 0.13, amusement 0.06
+   has cultural meaning: yes
+2. concept: lotus motif
+   matched image concept: lotus motif (symbolic_cultural_motifs)
+   key associations: purity and moral integrity; traditional folk art aesthetics; spiritual harmony and peace
+   emotion distribution: contentment 0.42, disgust 0.26, fear 0.16, awe 0.06
+   has cultural meaning: yes
+3. concept: lotus throne
+   matched image concept: lotus throne (objects_subjects)
+   key associations: Buddhist deity seating; sacred purity and enlightenment; eerie temple decay; obscured or blackened religious figures
+   emotion distribution: disgust 0.34, fear 0.32, contentment 0.17, awe 0.09
+   has cultural meaning: yes
+4. concept: water waves
+   matched image concept: water waves (objects_subjects)
+   key associations: chaotic water environments; monsters in the deep; unnatural or overwhelming colors
+   emotion distribution: fear 0.39, disgust 0.35, contentment 0.10, awe 0.06
+   has cultural meaning: no
+5. concept: reds
+   matched image concept: red (colors_color_schemes)
+   key associations: festive celebration and joy; good fortune and prosperity; traditional theatrical or mythical scenes
+   emotion distribution: contentment 0.75, awe 0.08, fear 0.05, disgust 0.04
+   has cultural meaning: yes
+
+Use this knowledge only when it is visually relevant to the image. Do not force an emotion only because a concept appears in the knowledge base.
+
+Also give a brief reason based on the visual content and, when provided, the relevant cultural knowledge.
+Respond in exactly this format:
+emotion: <one emotion label>
+reason: <brief reason>

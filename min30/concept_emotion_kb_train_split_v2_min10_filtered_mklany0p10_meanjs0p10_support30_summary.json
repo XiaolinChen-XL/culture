@@ -1,0 +1,34 @@
+{
+  "source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10.json",
+  "output_json": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_support30.json",
+  "output_jsonl": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_support30.jsonl",
+  "filter": "support_annotations >= 30 applied per (concept, dimension, culture) entry",
+  "counts": {
+    "original_entries": 9383,
+    "filtered_entries": 3067,
+    "removed_entries": 6316,
+    "original_groups": 3240,
+    "filtered_groups": 1098,
+    "removed_groups": 2142
+  },
+  "culture_counts_before": {
+    "ar": 3092,
+    "en": 3057,
+    "zh": 3234
+  },
+  "culture_counts_after": {
+    "ar": 984,
+    "en": 1017,
+    "zh": 1066
+  },
+  "group_entry_count_distribution_before": {
+    "2": 337,
+    "3": 2903
+  },
+  "group_entry_count_distribution_after": {
+    "1": 75,
+    "2": 77,
+    "3": 946
+  },
+  "min_support_after": 30
+}

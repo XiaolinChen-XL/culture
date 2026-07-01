@@ -1,0 +1,44 @@
+{
+  "source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_cultural_meanings_gemini35_english.json",
+  "output_all": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_emotion_distribution_tuples_gemini35_english.json",
+  "source_records": 9353,
+  "tuple_count": 9353,
+  "skipped_count": 0,
+  "skipped_sample": [],
+  "empty_key_associations_count": 0,
+  "culture_counts": {
+    "ar": 3091,
+    "en": 3057,
+    "zh": 3205
+  },
+  "has_cultural_meaning_counts": {
+    "False": 5641,
+    "True": 3712
+  },
+  "outputs_by_culture": {
+    "en": {
+      "file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_emotion_distribution_tuples_gemini35_english_en.json",
+      "count": 3057,
+      "has_cultural_meaning_counts": {
+        "False": 2059,
+        "True": 998
+      }
+    },
+    "zh": {
+      "file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_emotion_distribution_tuples_gemini35_english_zh.json",
+      "count": 3205,
+      "has_cultural_meaning_counts": {
+        "False": 1549,
+        "True": 1656
+      }
+    },
+    "ar": {
+      "file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_culture_association_emotion_distribution_tuples_gemini35_english_ar.json",
+      "count": 3091,
+      "has_cultural_meaning_counts": {
+        "False": 2033,
+        "True": 1058
+      }
+    }
+  }
+}

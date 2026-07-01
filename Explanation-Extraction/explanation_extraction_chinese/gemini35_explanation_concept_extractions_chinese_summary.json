@@ -1,0 +1,17 @@
+{
+  "culture": "chinese",
+  "model": "gemini-3.5-flash",
+  "source_explanation_file": "/home/xiaolin/Model_36_ArtElingo/chinese_explanations_full.jsonl",
+  "train_csv": "/home/xiaolin/Model_36_ArtElingo/arteculture_6792_downsampled_with_country_nonblank_region_split_v2_train.csv",
+  "batch_output": "explanation_extraction_chinese/gemini35_explanation_concept_extractions_chinese.jsonl",
+  "flat_output": "explanation_extraction_chinese/gemini35_explanation_concept_extractions_chinese_flat.jsonl",
+  "failed_output": "explanation_extraction_chinese/gemini35_explanation_concept_extractions_chinese_failed.jsonl",
+  "records_loaded": 25255,
+  "batches_total": 1263,
+  "batches_processed_this_run": 1262,
+  "batches_failed_this_run": 1,
+  "extractions_written_this_run": 27346,
+  "empty_texts_this_run": 154,
+  "image_rows": 6792,
+  "kept_train_image_rows": 5434
+}

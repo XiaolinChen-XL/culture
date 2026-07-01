@@ -1,0 +1,47 @@
+{
+  "support30_source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_support30.json",
+  "cultural_meaning_source_file": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\Writing\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_cultural_meanings_gemini35_english.json",
+  "output_json": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_support30_with_cultural_meanings_gemini35_english.json",
+  "output_jsonl": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\Concept\\concept_emotion_kb_train_split_v2_min10_filtered_mklany0p10_meanjs0p10_support30_with_cultural_meanings_gemini35_english.jsonl",
+  "merge_key": "concept|||dimension|||culture",
+  "counts": {
+    "support30_entries": 3067,
+    "cultural_meaning_records": 9353,
+    "merged_entries": 3067,
+    "entries_with_cultural_meaning": 3057,
+    "entries_missing_cultural_meaning": 10,
+    "duplicate_cultural_meaning_record_ids": 0
+  },
+  "missing_record_ids": [
+    "yellow-greens|||colors_color_schemes|||zh",
+    "sailboats|||objects_subjects|||zh",
+    "house|||objects_subjects|||zh",
+    "water reflection|||objects_subjects|||zh",
+    "meadow|||objects_subjects|||zh",
+    "swans|||objects_subjects|||zh",
+    "rainbow|||objects_subjects|||zh",
+    "field|||scenes_settings|||zh",
+    "port|||scenes_settings|||zh",
+    "balcony|||scenes_settings|||zh"
+  ],
+  "duplicate_record_ids": [],
+  "culture_counts": {
+    "ar": 984,
+    "en": 1017,
+    "zh": 1066
+  },
+  "meaning_type_counts": {
+    "MISSING": 10,
+    "literary_historical": 795,
+    "ritual_religious": 97,
+    "social_custom": 298,
+    "symbolic": 32,
+    "uncertain": 1,
+    "visual_affective": 1834
+  },
+  "has_cultural_meaning_counts": {
+    "False": 1762,
+    "MISSING": 10,
+    "True": 1295
+  }
+}

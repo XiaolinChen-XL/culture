@@ -1,0 +1,16 @@
+dimension,culture,n_ge_30,n_10_29,n_5_9,n_1_4,total
+colors_color_schemes,ar,322,341,940,457,2060
+colors_color_schemes,en,330,346,896,488,2060
+colors_color_schemes,zh,334,363,1009,354,2060
+compositional_style,ar,481,648,1221,519,2869
+compositional_style,en,494,621,1209,545,2869
+compositional_style,zh,505,691,1286,387,2869
+objects_subjects,ar,952,1635,4016,1328,7931
+objects_subjects,en,1000,1619,3927,1385,7931
+objects_subjects,zh,1017,1768,4357,789,7931
+scenes_settings,ar,313,560,1354,466,2693
+scenes_settings,en,317,562,1315,499,2693
+scenes_settings,zh,333,618,1437,305,2693
+symbolic_cultural_motifs,ar,103,298,949,512,1862
+symbolic_cultural_motifs,en,102,305,923,532,1862
+symbolic_cultural_motifs,zh,107,331,1035,389,1862

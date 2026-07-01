@@ -1,0 +1,121 @@
+{
+  "source": "F:\\Cross-Cultural Emotion\\Dataset\\VULCA\\ArtECulture\\records_with_concepts_split_v2\\train_records_with_concepts.jsonl",
+  "train_records": 5434,
+  "min_support": 10,
+  "alpha": 0.5,
+  "emotion_vocab": [
+    "amusement",
+    "anger",
+    "awe",
+    "contentment",
+    "disgust",
+    "excitement",
+    "fear",
+    "sadness",
+    "something else"
+  ],
+  "total_candidate_keys": 52245,
+  "kept_keys": 17416,
+  "all_bucket_counts": {
+    "N >= 30": 6710,
+    "10-29": 10706,
+    "1-4": 8955,
+    "5-9": 25874
+  },
+  "kept_bucket_counts": {
+    "N >= 30": 6710,
+    "10-29": 10706
+  },
+  "by_dimension_culture": {
+    "colors_color_schemes|ar": {
+      "5-9": 940,
+      "N >= 30": 322,
+      "10-29": 341,
+      "1-4": 457
+    },
+    "colors_color_schemes|en": {
+      "5-9": 896,
+      "10-29": 346,
+      "N >= 30": 330,
+      "1-4": 488
+    },
+    "colors_color_schemes|zh": {
+      "5-9": 1009,
+      "N >= 30": 334,
+      "10-29": 363,
+      "1-4": 354
+    },
+    "compositional_style|ar": {
+      "N >= 30": 481,
+      "5-9": 1221,
+      "10-29": 648,
+      "1-4": 519
+    },
+    "compositional_style|en": {
+      "N >= 30": 494,
+      "1-4": 545,
+      "10-29": 621,
+      "5-9": 1209
+    },
+    "compositional_style|zh": {
+      "N >= 30": 505,
+      "1-4": 387,
+      "10-29": 691,
+      "5-9": 1286
+    },
+    "objects_subjects|ar": {
+      "N >= 30": 952,
+      "10-29": 1635,
+      "5-9": 4016,
+      "1-4": 1328
+    },
+    "objects_subjects|en": {
+      "N >= 30": 1000,
+      "10-29": 1619,
+      "1-4": 1385,
+      "5-9": 3927
+    },
+    "objects_subjects|zh": {
+      "N >= 30": 1017,
+      "10-29": 1768,
+      "1-4": 789,
+      "5-9": 4357
+    },
+    "scenes_settings|ar": {
+      "5-9": 1354,
+      "N >= 30": 313,
+      "10-29": 560,
+      "1-4": 466
+    },
+    "scenes_settings|en": {
+      "5-9": 1315,
+      "N >= 30": 317,
+      "10-29": 562,
+      "1-4": 499
+    },
+    "scenes_settings|zh": {
+      "5-9": 1437,
+      "N >= 30": 333,
+      "10-29": 618,
+      "1-4": 305
+    },
+    "symbolic_cultural_motifs|ar": {
+      "10-29": 298,
+      "N >= 30": 103,
+      "1-4": 512,
+      "5-9": 949
+    },
+    "symbolic_cultural_motifs|en": {
+      "5-9": 923,
+      "10-29": 305,
+      "N >= 30": 102,
+      "1-4": 532
+    },
+    "symbolic_cultural_motifs|zh": {
+      "5-9": 1035,
+      "10-29": 331,
+      "N >= 30": 107,
+      "1-4": 389
+    }
+  }
+}
