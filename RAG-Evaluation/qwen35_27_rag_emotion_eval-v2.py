@@ -8,7 +8,7 @@ from collections import Counter
 from pathlib import Path
 
 
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "5")
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "4")
 
 try:
     from tqdm import tqdm
