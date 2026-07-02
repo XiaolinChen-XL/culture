@@ -1,0 +1,28 @@
+{
+  "mode": "rag",
+  "model": "/home/xiaolin/LLM/Qwen3.5-27B",
+  "test_csv": "/home/xiaolin/dataset/ArtECulture/arteculture_6792_downsampled_with_country_nonblank_region_split_v2_test.csv",
+  "concept_jsonl": null,
+  "concept_cache_jsonl": "/home/xiaolin/Model_37_ArtECulture/RAG-Evaluation/outputs/qwen35_27_multilingual_image_concepts.jsonl",
+  "kb_dir": "/home/xiaolin/Model_37_ArtECulture/LLM-analysis",
+  "output_csv": "/home/xiaolin/Model_37_ArtECulture/RAG-Evaluation/outputs/qwen35_27_rag_test_predictions.csv",
+  "output_jsonl": "/home/xiaolin/Model_37_ArtECulture/RAG-Evaluation/outputs/qwen35_27_rag_test_predictions.jsonl",
+  "cultures": [
+    "english",
+    "chinese",
+    "arabic"
+  ],
+  "max_samples": null,
+  "top_k": 6,
+  "cultural_only": false,
+  "fuzzy_threshold": 0.75,
+  "metrics": {
+    "valid_predictions": 0,
+    "accuracy": null,
+    "per_culture": {},
+    "failed_or_unknown": 2037
+  },
+  "status_counts": {
+    "API_FAILED": 2037
+  }
+}
