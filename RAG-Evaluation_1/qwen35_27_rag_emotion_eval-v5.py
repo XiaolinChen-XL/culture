@@ -115,7 +115,7 @@ def get_args():
     parser.add_argument("--top_k", type=int, default=6)
     parser.add_argument("--cultural_only", action="store_true", help="Retrieve only KB entries with has_cultural_meaning=true.")
     parser.add_argument("--max_new_tokens", type=int, default=192)
-    parser.add_argument("--max_concept_tokens", type=int, default=1024)
+    parser.add_argument("--max_concept_tokens", type=int, default=2048)
     parser.add_argument("--fuzzy_threshold", type=float, default=0.82)
     parser.add_argument("--separate_culture_calls", action="store_true", help="Run one Qwen generation per culture instead of one combined call for --culture all.")
     parser.add_argument("--sleep_interval", type=float, default=0.0)
@@ -557,6 +557,94 @@ def parse_multi_prediction(text, cultures):
     return parsed
 
 
+def make_metric_stats(cultures):
+    return {
+        culture: {
+            "total": 0,
+            "correct": 0,
+            "failed": 0,
+            "unknown": 0,
+            "emotion_total": Counter(),
+            "emotion_correct": Counter(),
+        }
+        for culture in cultures
+    }
+
+
+def update_metric_stats(stats_by_culture, out):
+    culture = out.get("target_culture")
+    if culture not in stats_by_culture:
+        return
+    stats = stats_by_culture[culture]
+    pred = out.get("pred_emotion", "")
+    gt = out.get("gt_emotion", "")
+    if pred == "API_FAILED":
+        stats["failed"] += 1
+        return
+
+    stats["total"] += 1
+    if pred == "UNKNOWN":
+        stats["unknown"] += 1
+    if out.get("correct") == "1":
+        stats["correct"] += 1
+        stats["emotion_correct"][gt] += 1
+    stats["emotion_total"][gt] += 1
+
+
+def summarize_metric_stats(stats_by_culture):
+    total = sum(stats["total"] for stats in stats_by_culture.values())
+    correct = sum(stats["correct"] for stats in stats_by_culture.values())
+    failed = sum(stats["failed"] for stats in stats_by_culture.values())
+    unknown = sum(stats["unknown"] for stats in stats_by_culture.values())
+    accuracy = correct / total * 100 if total else 0.0
+    return total, correct, accuracy, failed, unknown
+
+
+def update_progress_postfix(pbar, stats_by_culture, concept_cache_size):
+    total, correct, accuracy, failed, unknown = summarize_metric_stats(stats_by_culture)
+    pbar.set_postfix(
+        {
+            "Top1": f"{accuracy:.2f}%",
+            "ok": total,
+            "corr": correct,
+            "fail": failed,
+            "unk": unknown,
+            "cache": concept_cache_size,
+        }
+    )
+
+
+def print_metric_report(stats_by_culture, output_csv):
+    print("\n" + "=" * 60)
+    print("Final results")
+    print("=" * 60)
+    for culture, stats in stats_by_culture.items():
+        total = stats["total"]
+        correct = stats["correct"]
+        accuracy = correct / total * 100 if total else 0.0
+        print(f"\n{culture} final results")
+        print(f"  total: {total}, top-1 correct: {correct}, accuracy: {accuracy:.2f}%")
+        print(f"  failed: {stats['failed']}, unknown: {stats['unknown']}")
+        print("  per-emotion accuracy:")
+        for emotion in rag.EMOTIONS:
+            t = stats["emotion_total"][emotion]
+            c = stats["emotion_correct"][emotion]
+            a = c / t * 100 if t else 0.0
+            print(f"    {emotion:16s}: {a:5.2f}% ({c}/{t})")
+
+    total, correct, accuracy, failed, unknown = summarize_metric_stats(stats_by_culture)
+    print("\n" + "=" * 60)
+    print("Summary")
+    print("=" * 60)
+    for culture, stats in stats_by_culture.items():
+        total_c = stats["total"]
+        correct_c = stats["correct"]
+        acc_c = correct_c / total_c * 100 if total_c else 0.0
+        print(f"  {culture:8s}: Top-1 = {acc_c:.2f}% ({correct_c}/{total_c}), failed={stats['failed']}, unknown={stats['unknown']}")
+    print(f"  {'overall':8s}: Top-1 = {accuracy:.2f}% ({correct}/{total}), failed={failed}, unknown={unknown}")
+    print(f"  saved: {output_csv}")
+
+
 def main():
     args = get_args()
     cultures = rag.parse_cultures(args.culture)
@@ -568,6 +656,13 @@ def main():
     if args.max_samples is not None:
         test_rows = test_rows[: args.max_samples]
     concepts_by_image = load_concept_cache(concept_cache_jsonl)
+
+    print(f"Input CSV: {args.test_csv}")
+    print(f"Output dir: {output_dir}")
+    print(f"Concept cache: {concept_cache_jsonl}")
+    print(f"Samples: {len(test_rows)}")
+    print(f"Cultures: {', '.join(cultures)}")
+    print(f"Mode: {args.mode}, top_k={args.top_k}, fuzzy_threshold={args.fuzzy_threshold}")
 
     kb_index = {}
     if args.mode == "rag":
@@ -605,12 +700,14 @@ def main():
     file_exists = output_csv.exists() and output_csv.stat().st_size > 0
 
     predictions = []
+    stats_by_culture = make_metric_stats(cultures)
     if file_exists:
         with output_csv.open("r", encoding="utf-8-sig", newline="") as file:
             for row in csv.DictReader(file):
                 if args.retry_failed and row.get("pred_emotion") == "API_FAILED":
                     continue
                 predictions.append(row)
+                update_metric_stats(stats_by_culture, row)
 
     model = processor = device = torch_module = None
     if not args.dry_run:
@@ -621,7 +718,8 @@ def main():
         if not file_exists:
             writer.writeheader()
 
-        for row in tqdm(test_rows, desc=f"{OUTPUT_PREFIX} {args.mode} test images"):
+        pbar = tqdm(test_rows, desc=f"{OUTPUT_PREFIX} {args.mode} test images", unit="image", dynamic_ncols=True)
+        for row in pbar:
             basename = rag.image_basename(row.get("image_file"))
             image_path = rag.resolve_image_path(row.get("image_file"), args.old_image_prefix, args.image_base)
             concept_bundle = None
@@ -749,6 +847,7 @@ def main():
                     writer.writerow(out)
                     csv_file.flush()
                     predictions.append(out)
+                    update_metric_stats(stats_by_culture, out)
                     jsonl_file.write(
                         json.dumps(
                             {
@@ -762,6 +861,7 @@ def main():
                         + "\n"
                     )
                     jsonl_file.flush()
+                    update_progress_postfix(pbar, stats_by_culture, len(concepts_by_image))
 
                 if args.sleep_interval > 0:
                     time.sleep(args.sleep_interval)
@@ -844,6 +944,7 @@ def main():
                 writer.writerow(out)
                 csv_file.flush()
                 predictions.append(out)
+                update_metric_stats(stats_by_culture, out)
 
                 jsonl_file.write(
                     json.dumps(
@@ -858,6 +959,7 @@ def main():
                     + "\n"
                 )
                 jsonl_file.flush()
+                update_progress_postfix(pbar, stats_by_culture, len(concepts_by_image))
                 if args.sleep_interval > 0:
                     time.sleep(args.sleep_interval)
 
@@ -879,6 +981,7 @@ def main():
         "status_counts": dict(Counter(r.get("status") for r in predictions)),
     }
     summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    print_metric_report(stats_by_culture, output_csv)
     print(f"Wrote predictions: {output_csv}")
     print(f"Wrote details: {output_jsonl}")
     print(f"Wrote summary: {summary_json}")
